@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'food',
-
+    'drf_yasg',
     'rest_framework',
     'corsheaders',
+
 ]
 
 MIDDLEWARE = [

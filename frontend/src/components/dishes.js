@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import "../styles/dishes.css"
 import { Link, useLocation } from "react-router-dom";
 
 function dishes(props){
@@ -23,7 +24,7 @@ function dishes(props){
     }
     React.useEffect(()=>{
         getDishes()
-        return(()=>{})
+        return(()=>{setisLoaded(false)})
     }, [location.search])
     if (!isLoaded){
         return <div>
@@ -31,12 +32,12 @@ function dishes(props){
         </div>
     }
     else{
-        return <div>
+        return <div className="dishesdiv">
             {dishes.map(item=>{
-                return <div key={item.id}>
+                return <div className="dishitem" key={item.id}>
+                    <Link to={{pathname:`./${item.id}`, }}><h3>{item.name}</h3></Link>
                     <img src={item.img_url} alt='photo'/>
-                    <p>{item.name}</p>
-                    <p>{item.recipe}</p>
+                    
                 </div>
             })}
         </div>

@@ -1,0 +1,11 @@
+.dishesdiv{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.dishitem{
+    border: solid black 1px;
+}
+.dishitem img{
+    width: 280px;
+    height: auto;
+}
