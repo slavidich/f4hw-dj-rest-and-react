@@ -1,4 +1,4 @@
+*.pyc 
 /backend/venv
 /backend/.idea
 /frontend/node_modules
-*.pyc
