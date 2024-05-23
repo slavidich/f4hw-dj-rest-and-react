@@ -1,11 +1,45 @@
-.dishesdiv{
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+.dishes{
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    justify-content: center; /* Центрируем элементы по горизонтали */
 }
-.dishitem{
-    border: solid black 1px;
+.dish{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 220px; /* Фиксированная ширина */
+    max-height: 250px; /* Фиксированная высота */
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
 }
-.dishitem img{
-    width: 280px;
+.dish img{
+    max-width: 88%;
+    min-height: 150px;
+    max-height: 150px; /* Ограничиваем высоту изображения */
     height: auto;
+    border-radius: 5%;
+}
+.dish a{
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .dish {
+        width:200px;
+        height: 200px
+    }
+    .dish img{
+        width: 140px;
+        height: 120px;
+        min-height: 120px;
+    }
+    .dishes {
+        justify-content: center;
+    }
 }

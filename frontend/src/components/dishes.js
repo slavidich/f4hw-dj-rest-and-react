@@ -32,9 +32,9 @@ function dishes(props){
         </div>
     }
     else{
-        return <div className="dishesdiv">
+        return <div className="dishes">
             {dishes.map(item=>{
-                return <div className="dishitem" key={item.id}>
+                return <div className="dish" key={item.id}>
                     <Link to={{pathname:`./${item.id}`, }}><h3>{item.name}</h3></Link>
                     <img src={item.img_url} alt='photo'/>
                     

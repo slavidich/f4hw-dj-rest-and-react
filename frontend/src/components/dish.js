@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import  { Link, useLocation, useParams, Navigate } from "react-router-dom";
+import "../styles/dish.css"
 
 function dish(props){
     let [isLoaded, setisLoaded] = React.useState(false)
@@ -29,9 +30,10 @@ function dish(props){
     if (Object.keys(dish).length ===0 ){
         return(<div><p>Такого блюда не существует!</p></div>)
     }
-    return(<div>
+    return(<div className="dishInfo">
         <h2>{dish.dish.name}</h2>
         <img src={dish.dish.img_url} alt='photo'/>
+        <h3>Ингредиенты:</h3>
         <ul>
             {dish.ingridients.map(item=>{
                 return(<li key={item.id}>
@@ -39,6 +41,7 @@ function dish(props){
                 </li>)
             })}
         </ul>
+        <h3>Как приготовить:</h3>
         <p>{dish.dish.recipe}</p>
     </div>)
 }

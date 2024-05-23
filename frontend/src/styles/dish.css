@@ -1,0 +1,26 @@
+.dishInfo{
+    display:flex;
+    flex-direction: column;
+    margin-left:15px
+}
+.dishInfo h2{
+    font-size:40px;
+}
+.dishInfo ul {
+    list-style-type: disc; 
+    padding-left: 20px; 
+}
+
+.dishInfo img {
+    max-width: 40%; /* Масштабирование изображения под ширину контейнера */
+    height: auto; /* Сохранение пропорций изображения */
+    border: 1px solid #ccc; /* Добавление рамки к изображению */
+    border-radius: 5px; /* Скругление углов рамки */
+}
+
+.dishInfo p {
+    font-size: 16px; /* Размер текста */
+    line-height: 1.5; /* Межстрочный интервал */
+    color: #333; /* Цвет текста */
+    margin: 0; /* Убираем стандартные отступы */
+}
